@@ -1,176 +1,303 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl" data-theme="light" data-lang="ar">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="هذه هي صفحة هبوط لعد تنازلي لنشر تطبيق جوال">
-    <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="asset/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>الانطلاق قريبًا</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fabrioo — Coming Soon" />
+    <title>Fabrioo — قريبًا</title>
+
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <header class="text-center">
-        <div class="brand">
-            <div class="logo">
-                <img src="images/logo1.png" alt="logo">
-            </div>
-            <div class="slogo">
-                <img src="images/logo2.png" alt="slogo">
-            </div>
-        </div>
-        <div class="heading-page">
-            <h1>انتظروا انطلاق التطبيق قريباً</h1>
-            <p>هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع</p>
-        </div>
-        <div class="count-down">
-            <div class="counter">
-                <span class="count-amount" id="months"></span>
-                <span class="count-period">أشهر</span>
-            </div>
-            <div class="counter">
-                <span class="count-amount" id="days"></span>
-                <span class="count-period">أيام</span>
-            </div>
-            <div class="counter">
-                <span class="count-amount" id="hours"></span>
-                <span class="count-period">ساعات</span>
-            </div>
-            <div class="counter">
-                <span class="count-amount" id="minutes"></span>
-                <span class="count-period">دقائق</span>
-            </div>
-            <div class="counter">
-                <span class="count-amount" id="seconds"></span>
-                <span class="count-period">ثواني</span>
-            </div>
-        </div>
-        <div class="send-notification">
-            <p>هل تريد إرسال إشعار فور الانطلاق؟</p>
-            <form class="needs-validation" novalidate>
-                <div class="input-group">
-                    <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
-                    <button type="submit" class="btn"><img src="images/send1.png" alt=""></button>
-                    <div class="invalid-feedback">
-                        عذرًا يرجى إدخال البريد الإلكتروني
-                      </div>
+
+    <a class="skip-link" href="#main" data-i18n="skip">تخطي إلى المحتوى</a>
+
+    <header class="header cs-header" id="top">
+        <div class="overlay cs-overlay">
+
+            <nav class="fabrioo-navbar cs-navbar reveal reveal-down">
+                <a class="cs-brand" href="#top" aria-label="Fabrioo">
+                    <img class="brand-logo" src="assets/Icons/Logo.svg" alt="Fabrioo Logo">
+                </a>
+
+                <div class="cs-actions">
+                    <button class="cs-btn cs-btn-ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+                        <span class="cs-ico" id="themeIcon" aria-hidden="true">☾</span>
+                        <span class="cs-btn-text" data-i18n="theme">الوضع</span>
+                    </button>
+
+                    <button class="cs-btn cs-btn-ghost" id="langToggle" type="button" aria-label="Toggle language">
+                        <span class="cs-ico" aria-hidden="true">⌁</span>
+                        <span class="cs-btn-text" id="langLabel">AR</span>
+                    </button>
+
+                    <a class="btn-fabrioo" href="#notify" data-i18n="ctaNav">أشعرني عند الإطلاق</a>
                 </div>
-            </form>
+            </nav>
+
+            <div class="cs-hero container">
+                <div class="cs-hero-text">
+
+                    <div class="cs-badge reveal reveal-up">
+                        <span class="icon-badge" aria-hidden="true">
+                            <!-- sparkles -->
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2l1.2 4.2L17.4 7.4 13.2 8.6 12 12.8 10.8 8.6 6.6 7.4l4.2-1.2L12 2Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span data-i18n="badge">ملابس ذكية • راحة يومية</span>
+                    </div>
+
+                    <h1 class="cs-title reveal reveal-up delay-1" data-i18n="title">
+                        انتظروا انطلاق Fabrioo قريبًا
+                    </h1>
+
+                    <p class="cs-subtitle reveal reveal-up delay-2" data-i18n="subtitle">
+                        تجربة ملابس ذكية تجمع الراحة اليومية مع تفاصيل تقنية بسيطة… لتدعم راحتك الجسدية والنفسية.
+                    </p>
+
+                    <div class="cs-countdown reveal reveal-up delay-3" role="timer" aria-live="polite"
+                        data-target-date="2026-09-01T00:00:00+02:00">
+
+                        <div class="cs-stat feature-card">
+                            <div class="cs-stat-value" id="months">0</div>
+                            <div class="cs-stat-label" data-i18n="months">أشهر</div>
+                        </div>
+
+                        <div class="cs-stat feature-card">
+                            <div class="cs-stat-value" id="days">0</div>
+                            <div class="cs-stat-label" data-i18n="days">أيام</div>
+                        </div>
+
+                        <div class="cs-stat feature-card">
+                            <div class="cs-stat-value" id="hours">00</div>
+                            <div class="cs-stat-label" data-i18n="hours">ساعات</div>
+                        </div>
+
+                        <div class="cs-stat feature-card">
+                            <div class="cs-stat-value" id="minutes">00</div>
+                            <div class="cs-stat-label" data-i18n="minutes">دقائق</div>
+                        </div>
+
+                        <div class="cs-stat feature-card">
+                            <div class="cs-stat-value" id="seconds">00</div>
+                            <div class="cs-stat-label" data-i18n="seconds">ثواني</div>
+                        </div>
+                    </div>
+
+                    <div class="cs-notify reveal reveal-up" id="notify">
+                        <h2 class="cs-notify-title" data-i18n="notifyTitle">كن أول من يعرف</h2>
+                        <p class="cs-notify-text" data-i18n="notifyText">اترك بريدك لنرسل لك إشعارًا لحظة الإطلاق.</p>
+
+                        <form class="cs-form" id="notifyForm" novalidate>
+                            <div class="cs-field">
+                                <input class="cs-input" id="email" type="email" required data-i18n-ph="emailPlaceholder"
+                                    placeholder="البريد الإلكتروني" />
+                                <button class="btn-fabrioo" type="submit" data-i18n="notifyBtn">إرسال</button>
+                            </div>
+
+                            <p class="cs-micro" data-i18n="privacyNote">لن نرسل رسائل مزعجة — إشعار الإطلاق فقط.</p>
+                            <p class="cs-msg cs-msg-error" id="emailError" data-i18n="emailInvalid" hidden>
+                                عذرًا يرجى إدخال بريد إلكتروني صحيح
+                            </p>
+                            <p class="cs-msg cs-msg-success" id="emailSuccess" data-i18n="emailSuccess" hidden>
+                                تم! سنخبرك لحظة الإطلاق ✅
+                            </p>
+                        </form>
+
+                        <div class="cs-stores">
+                            <a class="cs-store hover-float" href="#" aria-label="App Store">
+                                <span class="cs-store-ico" aria-hidden="true"></span>
+                                <span data-i18n="ctaAppStore">App Store</span>
+                            </a>
+
+                            <a class="cs-store hover-float" href="#" aria-label="Google Play">
+                                <span class="cs-store-ico" aria-hidden="true">▶</span>
+                                <span data-i18n="ctaGooglePlay">Google Play</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cs-hero-media reveal reveal-right">
+                    <!-- Optional shared visual (لو عندك موكاب/صورة) -->
+                    <div class="cs-mockup-card product-card">
+                        <div class="cs-mockup-top">
+                            <span class="icon-badge" aria-hidden="true">
+                                <!-- sliders -->
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 21V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M4 10V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M12 21V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M12 8V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M20 21V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M20 12V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M2 14H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M10 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M18 16H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </span>
+                            <div>
+                                <div class="cs-mockup-title" data-i18n="mockTitle">تجربة Fabrioo</div>
+                                <div class="cs-mockup-sub" data-i18n="mockSub">واجهة بسيطة، نتائج أوضح.</div>
+                            </div>
+                        </div>
+
+                        <div class="cs-mockup-body">
+                            <div class="cs-chip" data-i18n="chip1">راحة</div>
+                            <div class="cs-chip" data-i18n="chip2">تتبّع</div>
+                            <div class="cs-chip" data-i18n="chip3">تخصيص</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </header>
-    <main>
-        <section class="features">
+
+    <main id="main">
+        <section class="cs-section section-pad" aria-labelledby="featuresTitle">
             <div class="container">
-                <h2>مميزات اللعبة</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="images/prush.png" alt="prush icon">
+                <div class="cs-section-head reveal reveal-up">
+                    <h2 id="featuresTitle" class="cs-h2" data-i18n="featuresTitle">مميزات Fabrioo</h2>
+                    <p class="cs-section-sub" data-i18n="featuresSubtitle">
+                        لأن الراحة ليست رفاهية… بل “إعداد افتراضي” لازم يرجع يشتغل.
+                    </p>
+                </div>
+
+                <div class="cs-grid">
+                    <article class="feature-card reveal reveal-up">
+                        <div class="cs-card-top">
+                            <div class="icon-badge" aria-hidden="true">
+                                <!-- heart -->
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.8 4.6c-1.9-2-5-2-6.9 0L12 6.6l-1.9-2c-1.9-2-5-2-6.9 0-2 2.1-2 5.5 0 7.6l8.8 9.2 8.8-9.2c2-2.1 2-5.5 0-7.6Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                </svg>
                             </div>
-                            <div class="flex-grow-1 ms-3">
-                              <h4>تصميم أنيق وعصري</h4>
-                              <p>هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع</p>
-                            </div>
+                            <h3 class="cs-h3" data-i18n="f1Title">راحة نفسية وجسدية</h3>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="images/phone.png" alt="phone icon">
+                        <p data-i18n="f1Text">تصميم وخامات تدعم الراحة وتقلل الضغط خلال اليوم.</p>
+                    </article>
+
+                    <article class="feature-card reveal reveal-up delay-1">
+                        <div class="cs-card-top">
+                            <div class="icon-badge" aria-hidden="true">
+                                <!-- shirt -->
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 3l3 2 3-2 4 3-2 4-2-1v12H9V9L7 10 5 6l4-3Z" stroke="currentColor"
+                                        stroke-width="2" stroke-linejoin="round" />
+                                </svg>
                             </div>
-                            <div class="flex-grow-1 me-3">
-                              <h4>اللعبة متوفرة بوضع الشاشة الممتلئ</h4>
-                              <p>هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع</p>
-                            </div>
+                            <h3 class="cs-h3" data-i18n="f2Title">جودة ملابس حقيقية</h3>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="images/photo.png" alt="photo icon">
+                        <p data-i18n="f2Text">خامات مريحة ودمج تقني محسوب بدون تعقيد.</p>
+                    </article>
+
+                    <article class="feature-card reveal reveal-up delay-2">
+                        <div class="cs-card-top">
+                            <div class="icon-badge" aria-hidden="true">
+                                <!-- chart -->
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M4 19H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M7 14l3-3 3 2 5-6" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
                             </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h4>يوجد صور لتوضيح تفاصيل اللعبة</h4>
-                              <p>هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع</p>
-                            </div>
+                            <h3 class="cs-h3" data-i18n="f3Title">تقارير وتحليلات</h3>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="images/fork.png" alt="fork icon">
+                        <p data-i18n="f3Text">متابعة واضحة لتأثير المنتجات على راحتك وإنتاجيتك.</p>
+                    </article>
+
+                    <article class="feature-card reveal reveal-up">
+                        <div class="cs-card-top">
+                            <div class="icon-badge" aria-hidden="true">
+                                <!-- sliders -->
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 21V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M4 10V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M12 21V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M12 8V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                </svg>
                             </div>
-                            <div class="flex-grow-1 me-3">
-                              <h4>يمكنك مشاركة اللعبة كمجموعة</h4>
-                              <p>هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع</p>
-                            </div>
+                            <h3 class="cs-h3" data-i18n="f4Title">تخصيص ذكي</h3>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="images/mail.png" alt="mail icon">
+                        <p data-i18n="f4Text">تجربة تناسبك بناءً على احتياجك اليومي وتفضيلاتك.</p>
+                    </article>
+
+                    <article class="feature-card reveal reveal-up delay-1">
+                        <div class="cs-card-top">
+                            <div class="icon-badge" aria-hidden="true">
+                                <!-- sparkles -->
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 13l.7 2.3 2.3.7-2.3.7L5 19l-.7-2.3-2.3-.7 2.3-.7L5 13Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                </svg>
                             </div>
-                            <div class="flex-grow-1 ms-3">
-                              <h4>يمكنك إرسال الهدايا لأصدقائك عبر اللعبة</h4>
-                              <p>هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع</p>
-                            </div>
+                            <h3 class="cs-h3" data-i18n="f5Title">تجربة بسيطة</h3>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                              <img src="images/person-plus.png" alt="person icon">
+                        <p data-i18n="f5Text">واجهة واضحة بدون ازدحام… لأن المنتج ذكي كفاية.</p>
+                    </article>
+
+                    <article class="feature-card reveal reveal-up delay-2">
+                        <div class="cs-card-top">
+                            <div class="icon-badge" aria-hidden="true">
+                                <!-- truck -->
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 6h11v10H3V6Z" stroke="currentColor" stroke-width="2"
+                                        stroke-linejoin="round" />
+                                    <path d="M14 10h4l3 3v3h-7v-6Z" stroke="currentColor" stroke-width="2"
+                                        stroke-linejoin="round" />
+                                </svg>
                             </div>
-                            <div class="flex-grow-1 me-3">
-                              <h4> إضاف أصدقاء جدد لاستخدام اللعبة</h4>
-                              <p>هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع</p>
-                            </div>
+                            <h3 class="cs-h3" data-i18n="f6Title">توصيل ودعم</h3>
                         </div>
-                    </div>
+                        <p data-i18n="f6Text">تجربة متكاملة من الطلب حتى الدعم بعد الشراء.</p>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer-notification">
-            <h3>قم باضافة بريدك الألكتروني ليصلك إشعار فور الأنطلاق</h3>
-            <form class="needs-validation" novalidate>
-                <div class="input-group">
-                    <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
-                    <button type="submit"><img src="images/send2.png" alt="send icon"></button>
-                    <div class="invalid-feedback">
-                        عذرًا يرجى إدخال البريد الإلكتروني
-                    </div>
+
+    <footer class="footer cs-footer">
+        <div class="container cs-footer-inner reveal reveal-up">
+            <div class="cs-footer-left">
+                <p class="cs-footer-title">Fabrioo</p>
+                <p class="cs-footer-note" data-i18n="footerNote">راحة… لكن بنكهة تقنية.</p>
+            </div>
+
+            <div class="cs-footer-right">
+                <p class="cs-footer-label" data-i18n="followUs">تابعنا على القنوات الاجتماعية</p>
+                <div class="cs-social">
+                    <a class="cs-social-btn" href="#" aria-label="Facebook">f</a>
+                    <a class="cs-social-btn" href="#" aria-label="Twitter">𝕏</a>
+                    <a class="cs-social-btn" href="#" aria-label="LinkedIn">in</a>
+                    <a class="cs-social-btn" href="#" aria-label="Instagram">◎</a>
                 </div>
-            </form>
+                <a class="cs-email" href="mailto:info@example.com">info@example.com</a>
+            </div>
         </div>
-        <div class="social-media">
-            <h3>تابعنا على القنوات الإجتماعية</h3>
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </li>
-            </ul>
-            <hr>
-            <a href="mailto:info@example.com" class="email">
-                <i class="far fa-envelope"></i>
-                info@example.com
-            </a>
+
+        <div class="copyright">
+            © <span id="year"></span> Fabrioo
         </div>
     </footer>
 
-    <script src="asset/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
 </body>
+
 </html>
